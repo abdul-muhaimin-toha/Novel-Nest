@@ -1,5 +1,7 @@
 import PropTypes from "prop-types";
 import { CiTimer } from "react-icons/ci";
+import { RiPagesLine } from "react-icons/ri";
+import { MdFindInPage } from "react-icons/md";
 import book_details_image from "../assets/book_details.png";
 
 const BookAddedListCard = (props) => {
@@ -32,20 +34,20 @@ const BookAddedListCard = (props) => {
         </div>
         <div className="my-4 flex flex-col gap-3 md:flex-row md:items-center md:gap-8">
           <div className="flex items-center justify-start gap-4">
-            <CiTimer className="text-2xl text-primary" />
+            <RiPagesLine className="text-2xl text-primary" />
             <p className="text-black">Publisher: Scribber</p>
           </div>
           <div className="flex items-center justify-start gap-4">
-            <CiTimer className="text-2xl text-primary" />
+            <MdFindInPage className="text-2xl text-primary" />
             <p className="text-black">Page: 192</p>
           </div>
         </div>
         <div className="mt-4 flex flex-col gap-4 md:flex-row">
           <div className="flex flex-row gap-4">
-            <a className="flex items-center justify-center rounded-lg border-none bg-blue-200 px-4 py-2 text-xs text-black duration-200 hover:bg-primary">
+            <a className="flex items-center justify-center rounded-full border-none bg-blue-200 px-4 py-2 text-xs text-black duration-200 ">
               Category: Classic
             </a>
-            <a className="flex items-center justify-center rounded-lg border-none bg-blue-200 px-4 py-2 text-xs text-black duration-200 hover:bg-primary">
+            <a className="flex items-center justify-center rounded-full border-none bg-blue-200 px-4 py-2 text-xs text-black duration-200 ">
               Rating: 5.0
             </a>
           </div>
