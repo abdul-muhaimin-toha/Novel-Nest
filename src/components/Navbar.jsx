@@ -29,11 +29,13 @@ const Navbar = () => {
                 tabIndex={0}
                 className="menu dropdown-content menu-sm z-[1] mt-4 w-52 gap-3 rounded-md bg-base-100 pl-3 text-base font-medium text-black shadow-lg"
               >
-                <li className="duration-200 hover:text-primary">Home</li>
-                <li className="duration-200 hover:text-primary">
+                <li className="font-semibold duration-200 hover:text-primary">
+                  Home
+                </li>
+                <li className="font-semibold duration-200 hover:text-primary">
                   Listed Books
                 </li>
-                <li className="duration-200 hover:text-primary">
+                <li className="font-semibold duration-200 hover:text-primary">
                   Pages to read
                 </li>
               </ul>
@@ -47,9 +49,15 @@ const Navbar = () => {
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal flex gap-6 px-1 text-base font-medium text-black">
-              <li className="duration-200 hover:text-primary">Home</li>
-              <li className="duration-200 hover:text-primary">Listed Books</li>
-              <li className="duration-200 hover:text-primary">Pages to read</li>
+              <li className="font-semibold duration-200 hover:text-primary">
+                Home
+              </li>
+              <li className="font-semibold duration-200 hover:text-primary">
+                Listed Books
+              </li>
+              <li className="font-semibold duration-200 hover:text-primary">
+                Pages to read
+              </li>
             </ul>
           </div>
           <div className="navbar-end gap-3">
