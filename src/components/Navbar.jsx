@@ -29,9 +29,13 @@ const Navbar = () => {
                 tabIndex={0}
                 className="menu dropdown-content menu-sm z-[1] mt-4 w-52 gap-3 rounded-md bg-base-100 pl-3 text-base font-medium text-black shadow-lg"
               >
-                <li>Home</li>
-                <li>Listed Books</li>
-                <li>Pages to read</li>
+                <li className="duration-200 hover:text-primary">Home</li>
+                <li className="duration-200 hover:text-primary">
+                  Listed Books
+                </li>
+                <li className="duration-200 hover:text-primary">
+                  Pages to read
+                </li>
               </ul>
             </div>
             <a
