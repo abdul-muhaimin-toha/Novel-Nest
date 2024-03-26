@@ -185,7 +185,6 @@ const BookDetails = ({ book }) => {
           </div>
         </div>
       </div>
-      <Toaster position="top-right" reverseOrder={false} />
     </section>
   );
 };

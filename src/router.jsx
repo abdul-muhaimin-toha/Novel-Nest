@@ -7,6 +7,7 @@ import RootLayout, { BookListLoader } from "./RootLayout";
 import HomePage from "./Pages/HomePage";
 import ListedBooksPage from "./Pages/ListedBooksPage";
 import BookDetailsPage from "./Pages/BookDetailsPage";
+import PagesToRead from "./Pages/PagesToRead";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -21,6 +22,11 @@ export const router = createBrowserRouter(
       <Route
         path="book-details/:bookId"
         element={<BookDetailsPage />}
+        loader={BookListLoader}
+      />
+      <Route
+        path="pages-to-read"
+        element={<PagesToRead />}
         loader={BookListLoader}
       />
     </Route>,

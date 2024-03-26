@@ -123,7 +123,7 @@ const ListedBooksPage = () => {
               tabIndex={0}
               className="menu dropdown-content z-[1] w-52 space-y-4 rounded-box bg-secondary p-6 text-white shadow"
             >
-              <button onClick={() => handleSort("none")}>Clear Sort</button>
+              <button onClick={() => handleSort("none")}>Clear Sorting</button>
               <button onClick={() => handleSort("rating")}>Rating</button>
               <button onClick={() => handleSort("pages")}>Pages</button>
               <button onClick={() => handleSort("year")}>Published Year</button>
@@ -150,9 +150,6 @@ const ListedBooksPage = () => {
             <BookAddedList allBookList={displayWishList} />
           </TabPanel>
         </Tabs>
-      </div>
-      <div>
-        <Toaster position="top-right" reverseOrder={false} />
       </div>
     </>
   );
