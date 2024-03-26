@@ -19,7 +19,7 @@ const PagesToRead = () => {
   return (
     <>
       <SecondaryPageHeader title="Pages To Read" />
-      <Chart readList={readList} />
+      <Chart data={readList} />
     </>
   );
 };
