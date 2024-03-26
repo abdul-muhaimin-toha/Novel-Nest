@@ -2,9 +2,13 @@ import PropTypes from "prop-types";
 import cover_img from "../assets/book_details_cover.png";
 import {
   getReadListFromLS,
+  getWishListFromLS,
   setReadListInLS,
   updateReadListInLS,
+  updateWishListInLS,
 } from "../utils/localStoreManagement";
+import toast, { Toaster } from "react-hot-toast";
+import { Link } from "react-router-dom";
 
 const BookDetails = ({ book }) => {
   const {
@@ -26,9 +30,65 @@ const BookDetails = ({ book }) => {
     const isAlreadyAdded = readListFromLS.find((bookId) => bookId === book_id);
     if (!isAlreadyAdded) {
       updateReadListInLS(book_id);
+      toast("Book Added to read list", {
+        icon: "👏",
+        style: {
+          borderRadius: "10px",
+          background: "#333",
+          color: "#fff",
+        },
+      });
+    } else {
+      toast("Already Added to read list", {
+        icon: "❌",
+        style: {
+          borderRadius: "10px",
+          background: "#333",
+          color: "#fff",
+        },
+      });
     }
   };
-  const handleAddToWishList = () => {};
+  const handleAddToWishList = () => {
+    const wishListFromLS = getWishListFromLS();
+    const isAlreadyAddedToWL = wishListFromLS.find(
+      (bookId) => bookId === book_id,
+    );
+    const readListFromLS = getReadListFromLS();
+    const isAlreadyAddedToRL = readListFromLS.find(
+      (bookId) => bookId === book_id,
+    );
+
+    if (!isAlreadyAddedToWL && !isAlreadyAddedToRL) {
+      updateWishListInLS(book_id);
+      toast("Book Added to wish list", {
+        icon: "👏",
+        style: {
+          borderRadius: "10px",
+          background: "#333",
+          color: "#fff",
+        },
+      });
+    } else if (isAlreadyAddedToWL) {
+      toast("Already Added to Wish list", {
+        icon: "❌",
+        style: {
+          borderRadius: "10px",
+          background: "#333",
+          color: "#fff",
+        },
+      });
+    } else {
+      toast("Already Added to Read list", {
+        icon: "❌",
+        style: {
+          borderRadius: "10px",
+          background: "#333",
+          color: "#fff",
+        },
+      });
+    }
+  };
 
   return (
     <section>
@@ -113,10 +173,19 @@ const BookDetails = ({ book }) => {
                   Add to Wish List
                 </button>
               </div>
+              <div className="mt-16 flex justify-end">
+                <Link
+                  to={-1}
+                  className="px-8 text-xl font-bold text-primary duration-200 hover:bg-transparent"
+                >
+                  &larr; Go Back
+                </Link>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      <Toaster position="top-right" reverseOrder={false} />
     </section>
   );
 };
