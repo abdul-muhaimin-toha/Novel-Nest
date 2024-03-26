@@ -40,10 +40,10 @@ const Chart = ({ data }) => {
   return (
     <section>
       <div className="mx-auto max-w-7xl px-3 lg:px-6">
-        <div className="flex items-center justify-center py-12">
+        <div className="flex h-full items-center justify-center md:py-20">
           <BarChart
-            width={900}
-            height={400}
+            width={700}
+            height={360}
             data={data}
             margin={{
               top: 0,
