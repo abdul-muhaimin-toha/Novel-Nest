@@ -12,7 +12,11 @@ export const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
       <Route index element={<HomePage />} loader={BookListLoader} />
-      <Route path="listed-books" element={<ListedBooksPage />} />
+      <Route
+        path="listed-books"
+        element={<ListedBooksPage />}
+        loader={BookListLoader}
+      />
 
       <Route
         path="book-details/:bookId"
