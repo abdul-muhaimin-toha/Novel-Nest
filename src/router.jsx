@@ -13,7 +13,7 @@ import ErrorBook from "./components/ErrorBook";
 import TestimonialPage, {
   TestimonialLoaderData,
 } from "./Pages/TestimonialPage";
-import OurTeamPage from "./Pages/OurTeamPage";
+import OurTeamPage, { TeamMembersDataLoader } from "./Pages/OurTeamPage";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -35,7 +35,11 @@ export const router = createBrowserRouter(
         element={<PagesToRead />}
         loader={BookListLoader}
       />
-      <Route path="our-team" element={<OurTeamPage />} />
+      <Route
+        path="our-team"
+        element={<OurTeamPage />}
+        loader={TeamMembersDataLoader}
+      />
       <Route
         path="/testimonial"
         element={<TestimonialPage />}
