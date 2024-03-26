@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import TestimonialCard from "./TestimonialCard";
 
 const TestimonialList = ({ testimonials }) => {
@@ -12,6 +13,10 @@ const TestimonialList = ({ testimonials }) => {
       </div>
     </section>
   );
+};
+
+TestimonialList.propTypes = {
+  testimonials: PropTypes.array.isRequired,
 };
 
 export default TestimonialList;

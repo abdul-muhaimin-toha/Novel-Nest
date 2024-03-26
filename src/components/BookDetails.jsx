@@ -1,13 +1,12 @@
 import PropTypes from "prop-types";
-import cover_img from "../assets/book_details_cover.png";
+
 import {
   getReadListFromLS,
   getWishListFromLS,
-  setReadListInLS,
   updateReadListInLS,
   updateWishListInLS,
 } from "../utils/localStoreManagement";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
 
 const BookDetails = ({ book }) => {
@@ -189,6 +188,8 @@ const BookDetails = ({ book }) => {
   );
 };
 
-BookDetails.propTypes = {};
+BookDetails.propTypes = {
+  book: PropTypes.object.isRequired,
+};
 
 export default BookDetails;

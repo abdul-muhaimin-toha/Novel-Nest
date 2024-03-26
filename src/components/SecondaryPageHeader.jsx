@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const SecondaryPageHeader = ({ title }) => {
   return (
     <section>
@@ -10,6 +12,10 @@ const SecondaryPageHeader = ({ title }) => {
       </div>
     </section>
   );
+};
+
+SecondaryPageHeader.propTypes = {
+  title: PropTypes.string.isRequired,
 };
 
 export default SecondaryPageHeader;

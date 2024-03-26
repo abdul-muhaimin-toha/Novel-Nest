@@ -1,8 +1,10 @@
+import PropTypes from "prop-types";
+
 const TestimonialCard = ({ testimonial }) => {
   const { customer_name, designation, image_url } = testimonial;
   return (
-    <div className="mx-4 my-6 flex  flex-col  shadow-2xl">
-      <div className="flex-grow rounded-t-lg  px-4 py-12  sm:px-8 md:px-12">
+    <div className="mx-4 my-6 flex  flex-col shadow-2xl">
+      <div className="flex-grow rounded-t-lg px-4 py-12 sm:px-8 md:px-12">
         <p className="relative px-6 py-1 text-center text-lg italic text-primary">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -29,13 +31,17 @@ const TestimonialCard = ({ testimonial }) => {
         <img
           src={image_url}
           alt={customer_name}
-          className="-mt-16 mb-2 h-16 w-16 rounded-full bg-gray-500 bg-gray-700 bg-cover bg-center object-cover"
+          className="-mt-16 mb-2 h-16 w-16 rounded-full bg-gray-500  bg-cover bg-center object-cover"
         />
         <p className="text-xl font-semibold leading-tight">{customer_name}</p>
         <p className="text-sm uppercase">{designation}</p>
       </div>
     </div>
   );
+};
+
+TestimonialCard.propTypes = {
+  testimonial: PropTypes.object.isRequired,
 };
 
 export default TestimonialCard;

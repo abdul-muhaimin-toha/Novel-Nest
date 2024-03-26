@@ -15,6 +15,8 @@ const BookAddedList = ({ allBookList }) => {
   );
 };
 
-BookAddedList.propTypes = {};
+BookAddedList.propTypes = {
+  allBookList: PropTypes.array.isRequired,
+};
 
 export default BookAddedList;

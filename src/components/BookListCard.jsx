@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 import { IoMdStar } from "react-icons/io";
-import book_img from "../assets/book_image.png";
 import { Link } from "react-router-dom";
 
 const BookListCard = ({ book }) => {
@@ -51,6 +50,8 @@ const BookListCard = ({ book }) => {
   );
 };
 
-BookListCard.propTypes = {};
+BookListCard.propTypes = {
+  book: PropTypes.object.isRequired,
+};
 
 export default BookListCard;

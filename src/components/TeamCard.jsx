@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const TeamCard = ({ member }) => {
   const { name, designation, image_url } = member;
   return (
@@ -78,6 +80,10 @@ const TeamCard = ({ member }) => {
       </div>
     </div>
   );
+};
+
+TeamCard.propTypes = {
+  member: PropTypes.object.isRequired,
 };
 
 export default TeamCard;

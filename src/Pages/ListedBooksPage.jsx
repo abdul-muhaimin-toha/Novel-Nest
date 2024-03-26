@@ -4,12 +4,12 @@ import { FaAngleDown } from "react-icons/fa";
 import SecondaryPageHeader from "../components/SecondaryPageHeader";
 import BookAddedList from "../components/BookAddedList";
 import { useEffect, useState } from "react";
-import { Outlet, useLoaderData } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import {
   getReadListFromLS,
   getWishListFromLS,
 } from "../utils/localStoreManagement";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 
 const ListedBooksPage = () => {
   const [tabIndex, setTabIndex] = useState(0);

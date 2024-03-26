@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import TeamCard from "./TeamCard";
 
 const OurTeamList = ({ members }) => {
@@ -12,6 +13,10 @@ const OurTeamList = ({ members }) => {
       </div>
     </section>
   );
+};
+
+OurTeamList.propTypes = {
+  members: PropTypes.array.isRequired,
 };
 
 export default OurTeamList;

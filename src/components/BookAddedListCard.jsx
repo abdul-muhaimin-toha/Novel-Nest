@@ -2,7 +2,6 @@ import PropTypes from "prop-types";
 import { CiTimer } from "react-icons/ci";
 import { RiPagesLine } from "react-icons/ri";
 import { MdFindInPage } from "react-icons/md";
-import book_details_image from "../assets/book_details.png";
 import { Link } from "react-router-dom";
 
 const BookAddedListCard = ({ book }) => {
@@ -85,6 +84,8 @@ const BookAddedListCard = ({ book }) => {
   );
 };
 
-BookAddedListCard.propTypes = {};
+BookAddedListCard.propTypes = {
+  book: PropTypes.object.isRequired,
+};
 
 export default BookAddedListCard;
