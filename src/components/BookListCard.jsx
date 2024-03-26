@@ -1,35 +1,53 @@
 import PropTypes from "prop-types";
 import { IoMdStar } from "react-icons/io";
 import book_img from "../assets/book_image.png";
+import { Link } from "react-router-dom";
 
-const BookListCard = () => {
+const BookListCard = ({ book }) => {
+  const {
+    book_id,
+    book_title,
+    book_author,
+    book_cover,
+    category,
+    tags,
+    book_rating,
+  } = book;
   return (
-    <div className="rounded-2xl border border-primary-content p-6 shadow-xl">
-      <div className="mb-6 flex justify-center rounded-2xl border border-secondary-content bg-[#f3f3f3] px-16 py-8 shadow-md">
-        <img src={book_img} alt="Book Cover" />
-      </div>
-      <div className="mb-5 flex gap-2 text-xs font-medium">
-        <h4 className="rounded-xl border-2 border-secondary px-3 py-1 text-primary">
-          Young Adult
-        </h4>
-        <h4 className="rounded-xl border-2 border-secondary px-3 py-1 text-secondary">
-          Identity
-        </h4>
-      </div>
-      <h3 className="play-fair-display mb-5 text-3xl font-bold text-primary">
-        The Catcher In the Rye
-      </h3>
-      <p className="mb-4 text-lg font-medium text-secondary">
-        By: Awlad Hossain
-      </p>
-      <div className="flex items-center justify-between">
-        <p className="text-lg font-medium text-black">Fiction</p>
-        <div className="flex items-center gap-2">
-          <p className="text-lg font-medium text-black">4.5</p>
-          <IoMdStar className="text-2xl text-primary" />
+    <Link to={`/book-details/${book_id}`}>
+      <div className="rounded-2xl border border-primary-content p-6 shadow-xl">
+        <div className="mb-6 flex justify-center rounded-2xl border border-secondary-content bg-[#f3f3f3] px-16 py-8 shadow-md">
+          <img
+            src={book_cover}
+            alt={`Thumbnail for ${book_title}`}
+            className="h-48 object-cover"
+          />
+        </div>
+        <div className="mb-5 flex  flex-wrap gap-2 text-xs font-medium">
+          {tags.map((tag, index) => (
+            <h4
+              key={index}
+              className="rounded-xl border-2 border-secondary px-3 py-1 text-secondary"
+            >
+              {tag}
+            </h4>
+          ))}
+        </div>
+        <h3 className="play-fair-display  min-h-20 text-3xl font-bold text-primary">
+          {book_title}
+        </h3>
+        <p className="mb-4 text-lg font-medium text-secondary">
+          <span className="font-bold">By:</span> {book_author}
+        </p>
+        <div className="flex items-center justify-between">
+          <p className="text-lg font-medium text-black">{category}</p>
+          <div className="flex items-center gap-2">
+            <p className="text-lg font-medium text-black">{book_rating}</p>
+            <IoMdStar className="text-2xl text-primary" />
+          </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

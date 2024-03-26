@@ -1,11 +1,27 @@
+import { NavLink } from "react-router-dom";
+
 const Footer = () => {
   return (
     <footer className="bg-base-300 shadow-xl">
       <div className="mx-auto max-w-7xl px-3 lg:px-6">
         <div className="footer footer-center rounded py-10 text-base-content md:py-16">
-          <ul className="menu menu-horizontal flex flex-col gap-2 px-1 text-base font-medium text-black md:flex-row md:gap-8">
-            <li className=" duration-200 hover:text-primary">Listed Books</li>
-            <li className=" duration-200 hover:text-primary">Pages to read</li>
+          <ul className="menu menu-horizontal flex flex-col gap-2 px-1 text-base font-medium  md:flex-row md:gap-8">
+            <NavLink
+              to="/listed-books"
+              className={({ isActive }) =>
+                `duration-200 hover:text-primary ${isActive ? "text-primary" : "text-black"}`
+              }
+            >
+              Listed Books
+            </NavLink>
+            <NavLink
+              to="/pages-to-read"
+              className={({ isActive }) =>
+                `duration-200 hover:text-primary ${isActive ? "text-primary" : "text-black"}`
+              }
+            >
+              Pages to read
+            </NavLink>
           </ul>
           <nav>
             <div className="grid grid-flow-col gap-4">

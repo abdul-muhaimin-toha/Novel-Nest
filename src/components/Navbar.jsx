@@ -1,3 +1,5 @@
+import { Link, NavLink } from "react-router-dom";
+
 const Navbar = () => {
   return (
     <nav className="bg-base-100 shadow-xl">
@@ -27,37 +29,67 @@ const Navbar = () => {
               </div>
               <ul
                 tabIndex={0}
-                className="menu dropdown-content menu-sm z-[1] mt-4 w-52 gap-3 rounded-md bg-base-100 pl-3 text-base font-medium text-black shadow-lg"
+                className="menu dropdown-content menu-sm z-[1] mt-4 w-52 gap-3 rounded-md bg-base-100 pl-3 text-base font-medium shadow-lg"
               >
-                <li className="font-semibold duration-200 hover:text-primary">
+                <NavLink
+                  to="/"
+                  className={({ isActive }) =>
+                    `font-semibold duration-200 hover:text-primary ${isActive ? "text-primary" : "text-black"}`
+                  }
+                >
                   Home
-                </li>
-                <li className="font-semibold duration-200 hover:text-primary">
+                </NavLink>
+                <NavLink
+                  to="/listed-books"
+                  className={({ isActive }) =>
+                    `font-semibold duration-200 hover:text-primary ${isActive ? "text-primary" : "text-black"}`
+                  }
+                >
                   Listed Books
-                </li>
-                <li className="font-semibold duration-200 hover:text-primary">
+                </NavLink>
+                <NavLink
+                  to="/pages-to-read"
+                  className={({ isActive }) =>
+                    `font-semibold duration-200 hover:text-primary ${isActive ? "text-primary" : "text-black"}`
+                  }
+                >
                   Pages to read
-                </li>
+                </NavLink>
               </ul>
             </div>
-            <a
-              href=""
+            <Link
+              to="/"
               className="p-0 text-xl font-bold text-primary duration-200 hover:bg-transparent hover:text-secondary"
             >
               Novel Nest
-            </a>
+            </Link>
           </div>
           <div className="navbar-center hidden lg:flex">
-            <ul className="menu menu-horizontal flex gap-6 px-1 text-base font-medium text-black">
-              <li className="font-semibold duration-200 hover:text-primary">
+            <ul className="menu menu-horizontal flex gap-6 px-1 text-base font-medium ">
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  `font-semibold duration-200 hover:text-primary ${isActive ? "text-primary" : "text-black"}`
+                }
+              >
                 Home
-              </li>
-              <li className="font-semibold duration-200 hover:text-primary">
+              </NavLink>
+              <NavLink
+                to="/listed-books"
+                className={({ isActive }) =>
+                  `font-semibold duration-200 hover:text-primary ${isActive ? "text-primary" : "text-black"}`
+                }
+              >
                 Listed Books
-              </li>
-              <li className="font-semibold duration-200 hover:text-primary">
-                Pages to read
-              </li>
+              </NavLink>
+              <NavLink
+                to="/pages-to-read"
+                className={({ isActive }) =>
+                  `font-semibold duration-200 hover:text-primary ${isActive ? "text-primary" : "text-black"}`
+                }
+              >
+                Pages to Read
+              </NavLink>
             </ul>
           </div>
           <div className="navbar-end gap-3">
