@@ -55,6 +55,22 @@ const Navbar = () => {
                 >
                   Pages to read
                 </NavLink>
+                <NavLink
+                  to="/Testimonial"
+                  className={({ isActive }) =>
+                    `font-semibold duration-200 hover:text-primary ${isActive ? "text-primary" : "text-black"}`
+                  }
+                >
+                  Testimonial
+                </NavLink>
+                <NavLink
+                  to="/our-team"
+                  className={({ isActive }) =>
+                    `font-semibold duration-200 hover:text-primary ${isActive ? "text-primary" : "text-black"}`
+                  }
+                >
+                  our-team
+                </NavLink>
               </ul>
             </div>
             <Link
@@ -89,6 +105,22 @@ const Navbar = () => {
                 }
               >
                 Pages to Read
+              </NavLink>
+              <NavLink
+                to="/testimonial"
+                className={({ isActive }) =>
+                  `font-semibold duration-200 hover:text-primary ${isActive ? "text-primary" : "text-black"}`
+                }
+              >
+                Testimonial
+              </NavLink>
+              <NavLink
+                to="/our-team"
+                className={({ isActive }) =>
+                  `font-semibold duration-200 hover:text-primary ${isActive ? "text-primary" : "text-black"}`
+                }
+              >
+                Our Team
               </NavLink>
             </ul>
           </div>

@@ -22,6 +22,22 @@ const Footer = () => {
             >
               Pages to read
             </NavLink>
+            <NavLink
+              to="/testimonial"
+              className={({ isActive }) =>
+                `duration-200 hover:text-primary ${isActive ? "text-primary" : "text-black"}`
+              }
+            >
+              Testimonial
+            </NavLink>
+            <NavLink
+              to="/our-team"
+              className={({ isActive }) =>
+                `duration-200 hover:text-primary ${isActive ? "text-primary" : "text-black"}`
+              }
+            >
+              Our Team
+            </NavLink>
           </ul>
           <nav>
             <div className="grid grid-flow-col gap-4">
