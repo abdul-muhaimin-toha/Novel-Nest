@@ -9,7 +9,20 @@ import {
 } from "recharts";
 
 const Chart = ({ data }) => {
-  const colors = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "red", "pink"];
+  const colors = [
+    "#0088FE",
+    "#00C49F",
+    "#FFBB28",
+    "#FF8042",
+    "red",
+    "pink",
+    "orange",
+    "blue",
+    "green",
+    "pink",
+    "yellow",
+    "red",
+  ];
   const getPath = (x, y, width, height) => {
     return `M${x},${y + height}C${x + width / 3},${y + height} ${x + width / 2},${y + height / 3}
     ${x + width / 2}, ${y}
@@ -40,7 +53,7 @@ const Chart = ({ data }) => {
       <div className="mx-auto max-w-7xl px-3 lg:px-6">
         <div className="flex  items-center justify-center overflow-hidden md:py-20">
           <BarChart
-            width={1100}
+            width={1600}
             height={400}
             data={data}
             margin={{
