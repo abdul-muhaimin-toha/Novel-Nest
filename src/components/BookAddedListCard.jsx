@@ -65,10 +65,10 @@ const BookAddedListCard = ({ book }) => {
         </div>
         <div className="mt-4 flex flex-col gap-4 md:flex-row">
           <div className="flex flex-row gap-4">
-            <a className="flex items-center justify-center rounded-full border-none bg-blue-200 px-4 py-2 text-base text-black duration-200 ">
+            <a className="flex items-center justify-center rounded-full border-none bg-blue-200 px-4 py-2 text-xs text-black duration-200 ">
               Category: {category}
             </a>
-            <a className="flex items-center justify-center rounded-full border-none bg-blue-200 px-4 py-2 text-base text-black duration-200 ">
+            <a className="flex items-center justify-center rounded-full border-none bg-blue-200 px-4 py-2 text-xs text-black duration-200 ">
               Rating: {book_rating}
             </a>
           </div>
